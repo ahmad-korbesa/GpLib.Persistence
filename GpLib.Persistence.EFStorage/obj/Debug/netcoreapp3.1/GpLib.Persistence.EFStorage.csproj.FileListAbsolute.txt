@@ -1,0 +1,15 @@
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.Repo.dll
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.csprojAssemblyReference.cache
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.AssemblyInfoInputs.cache
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.AssemblyInfo.cs
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.deps.json
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.runtimeconfig.json
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.runtimeconfig.dev.json
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.dll
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.pdb
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\bin\Debug\netcoreapp3.1\GpLib.Persistence.Repo.pdb
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.csproj.CoreCompileInputs.cache
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.csproj.CopyComplete
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.dll
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.pdb
+C:\Users\ahmad\source\repos\GpLib.Persistence\GpLib.Persistence.EFStorage\obj\Debug\netcoreapp3.1\GpLib.Persistence.EFStorage.genruntimeconfig.cache
