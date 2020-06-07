@@ -11,9 +11,18 @@ jobs:
 
     runs-on: windows-latest
 
+
+
     steps:
     - name: Checkout repository 
       uses: actions/checkout@master
+      
+    - name: Generate build number
+      uses: einaregilsson/build-number@v2 
+      with:
+        token: ${{secrets.NUGETKEY}}        
+    - name: Print new build number
+      run: echo "Build number is ${env:BUILD_NUMBER}"
       
     - name: Install dependencies
       run: dotnet restore
@@ -24,7 +33,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack package
-      run:  dotnet pack --no-build -c Release -o out     
+      run:  dotnet pack -p:PackageVersion=${env:BUILD_NUMBER} --no-build -c Release -o out     
     - name: Push package
-      run: dotnet nuget push .\out\*.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
+      run: dotnet nuget push .\out\*${env:BUILD_NUMBER}.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
        
