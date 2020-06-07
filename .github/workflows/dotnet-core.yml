@@ -26,5 +26,5 @@ jobs:
     - name: Pack package
       run:  dotnet pack --no-build -c Release -o out     
     - name: Push package
-      run: dotnet nuget push .\out\*.nupkg -k ${{secrets.NUGETKEY}} -n -s https://api.nuget.org/v3/index.json
+      run: dotnet nuget push .\out\*.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols
        
