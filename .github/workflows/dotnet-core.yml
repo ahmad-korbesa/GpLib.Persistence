@@ -35,5 +35,5 @@ jobs:
     - name: Pack package
       run:  dotnet pack --version-suffix "1.0" -p:PackageVersion=${env:BUILD_NUMBER} --no-build -c Release -o out     
     - name: Push package
-      run: dotnet nuget push .\out\*${env:BUILD_NUMBER}.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
+      run: dotnet nuget push .\out\*.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
        
