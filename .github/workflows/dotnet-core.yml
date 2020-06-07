@@ -9,17 +9,22 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 3.1.101
+    - name: Checkout repository 
+      uses: actions/checkout@master
+      
     - name: Install dependencies
       run: dotnet restore
+      env:
+          NUGET_AUTH_TOKEN: ${{secrets.NUGETKEY}}
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    - name: Pack package
+      run:  dotnet pack --no-build -c Release -o out     
+    - name: Push package
+      run: dotnet nuget push .\GpLib.Persistence\GpLib.Persistence.Repo\out\*.nupkg -s https://api.nuget.org/v3/index.json
+       
