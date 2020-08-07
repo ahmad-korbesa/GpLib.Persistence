@@ -9,7 +9,6 @@ namespace GpLib.Persistence.EFStorage.Test
 {
     public class WriteTests
     {
-
         private static ServiceProvider ConfigureServices() =>
             new ServiceCollection()
             .AddTransient<DbContext>(builder => new DummyDbContext(Effort.DbConnectionFactory.CreateTransient(), true))
