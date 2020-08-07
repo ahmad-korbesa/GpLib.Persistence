@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.Repo", "GpLib.Persistence.Repo\GpLib.Persistence.Repo.csproj", "{5DEE0ABA-726C-4DDC-B1B7-4A78BB2F3DB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.Repo", "GpLib.Persistence.Repo\GpLib.Persistence.Repo.csproj", "{5DEE0ABA-726C-4DDC-B1B7-4A78BB2F3DB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.EFStorage", "GpLib.Persistence.EFStorage\GpLib.Persistence.EFStorage.csproj", "{84DE6D6C-4F4F-46C6-AB01-6283B02158B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.EFStorage", "GpLib.Persistence.EFStorage\GpLib.Persistence.EFStorage.csproj", "{84DE6D6C-4F4F-46C6-AB01-6283B02158B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.EFCoreStorage", "GpLib.Persistence.EFCoreStorage\GpLib.Persistence.EFCoreStorage.csproj", "{447E33DD-B287-4BCA-8A55-B7464E3D080D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.EFCoreStorage", "GpLib.Persistence.EFCoreStorage\GpLib.Persistence.EFCoreStorage.csproj", "{447E33DD-B287-4BCA-8A55-B7464E3D080D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.EFStorage.Test", "GpLib.Persistence.EFStorage.Test\GpLib.Persistence.EFStorage.Test.csproj", "{247D7298-4E46-40CD-B141-7988B89C590F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{447E33DD-B287-4BCA-8A55-B7464E3D080D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{447E33DD-B287-4BCA-8A55-B7464E3D080D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{447E33DD-B287-4BCA-8A55-B7464E3D080D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247D7298-4E46-40CD-B141-7988B89C590F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247D7298-4E46-40CD-B141-7988B89C590F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247D7298-4E46-40CD-B141-7988B89C590F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247D7298-4E46-40CD-B141-7988B89C590F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

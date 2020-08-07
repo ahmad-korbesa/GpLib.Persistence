@@ -1,10 +1,8 @@
 ﻿using GpLib.Persistence.Repo;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace GpLib.Persistence.EFStorage
@@ -17,9 +15,9 @@ namespace GpLib.Persistence.EFStorage
             _dbContext = dbContext;
 
         public virtual void Add(T item) => _dbContext.Set<T>().Add(item);
-  
+
         public virtual void Delete(T item) => _dbContext.Set<T>().Remove(item);
-  
+
         public virtual void Update(T item) => _dbContext.Entry(item).State = EntityState.Modified;
 
         public virtual int SaveChanges() => _dbContext.SaveChanges();
