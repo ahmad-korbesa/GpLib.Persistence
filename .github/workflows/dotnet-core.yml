@@ -11,14 +11,18 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout repository 
-      uses: actions/checkout@master
-      
+      uses: actions/checkout@v2.2.0
+      with: 
+        fetch-depth: 0
+    - name: 'Get Previous tag'
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@master" 
     - name: Generate build number
       uses: einaregilsson/build-number@v2 
       with:
         token: ${{secrets.github_token}}        
-    - name: Print new build number
-      run: echo "Build number is ${env:BUILD_NUMBER}"
+    - name: Print latest tag
+      run: echo "Build number is ${{ steps.previoustag.outputs.tag }}"
       
     - name: Install dependencies
       run: dotnet restore
@@ -29,7 +33,7 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack package
-      run:  dotnet pack -p:PackageVersion=1.0.${env:BUILD_NUMBER} --no-build -c Release -o out     
+      run:  dotnet pack -p:PackageVersion=${{ steps.previoustag.outputs.tag }} --no-build -c Release -o out     
     - name: Push package
-      run: dotnet nuget push .\out\*1.0.${env:BUILD_NUMBER}.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
+      run: dotnet nuget push .\out\*${{ steps.previoustag.outputs.tag }}.nupkg -k ${{secrets.NUGETKEY}} -s https://api.nuget.org/v3/index.json --no-symbols true
        
