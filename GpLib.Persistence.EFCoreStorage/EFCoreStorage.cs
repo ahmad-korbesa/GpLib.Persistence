@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GpLib.Persistence.EFCoreStorage
@@ -23,6 +24,8 @@ namespace GpLib.Persistence.EFCoreStorage
         public virtual int SaveChanges() => _dbContext.SaveChanges();
 
         public virtual Task<int> SaveChangesAsync() => _dbContext.SaveChangesAsync();
+
+        public virtual Task<int> SaveChangesAsync(CancellationToken cancellationToken) => _dbContext.SaveChangesAsync(cancellationToken);
 
         public virtual IQueryable<T> Filter(Expression<Func<T, bool>> expression)
             => _dbContext.Set<T>().Where(expression);

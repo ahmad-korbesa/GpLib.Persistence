@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GpLib.Persistence.Repo
 {
-    public class RepositoryBase<T> : IRepository<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         protected IStorage<T> _storage;
 
-        public RepositoryBase(IStorage<T> storage) => _storage = storage;
+        protected RepositoryBase(IStorage<T> storage) => _storage = storage;
 
         public virtual T Get(params object[] id) => _storage.Get(id);
 
@@ -26,6 +27,8 @@ namespace GpLib.Persistence.Repo
         public virtual int SaveChanges() => _storage.SaveChanges();
 
         public virtual Task<int> SaveChangesAsync() => _storage.SaveChangesAsync();
+
+        public virtual Task<int> SaveChangesAsync(CancellationToken cancellationToken) => _storage.SaveChangesAsync(cancellationToken);
 
         #region Dispose
 
@@ -47,6 +50,7 @@ namespace GpLib.Persistence.Repo
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
 
 
 

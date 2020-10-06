@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.EFStorage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.EFCoreStorage", "GpLib.Persistence.EFCoreStorage\GpLib.Persistence.EFCoreStorage.csproj", "{447E33DD-B287-4BCA-8A55-B7464E3D080D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.EFStorage.Test", "GpLib.Persistence.EFStorage.Test\GpLib.Persistence.EFStorage.Test.csproj", "{247D7298-4E46-40CD-B141-7988B89C590F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpLib.Persistence.EFStorage.Test", "GpLib.Persistence.EFStorage.Test\GpLib.Persistence.EFStorage.Test.csproj", "{247D7298-4E46-40CD-B141-7988B89C590F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpLib.Persistence.CosmosDB", "GpLib.Persistence.CosmosDB\GpLib.Persistence.CosmosDB.csproj", "{CEDEBEDB-FDEA-4CE3-BA43-396AFB3DE236}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{247D7298-4E46-40CD-B141-7988B89C590F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{247D7298-4E46-40CD-B141-7988B89C590F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{247D7298-4E46-40CD-B141-7988B89C590F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEDEBEDB-FDEA-4CE3-BA43-396AFB3DE236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEDEBEDB-FDEA-4CE3-BA43-396AFB3DE236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEDEBEDB-FDEA-4CE3-BA43-396AFB3DE236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEDEBEDB-FDEA-4CE3-BA43-396AFB3DE236}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
