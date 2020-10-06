@@ -23,5 +23,7 @@ namespace GpLib.Persistence.Repo
 
         Task<int> SaveChangesAsync();
 
+        Task<int> SaveChangesAsync(System.Threading.CancellationToken cancellationToken);
+
     }
 }
