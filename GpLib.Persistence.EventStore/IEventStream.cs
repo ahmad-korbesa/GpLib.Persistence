@@ -4,8 +4,8 @@ namespace GpLib.Persistence.EventStore
 {
     public interface IEventStream
     {
-        public string StreamId { get; set; }
+        string StreamId { get; set; }
 
-        public IEnumerable<IEvent> CommittedEvents { get; set; }
+        IEnumerable<IEvent> CommittedEvents { get; set; }
     }
 }
