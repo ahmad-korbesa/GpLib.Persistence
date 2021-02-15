@@ -6,7 +6,7 @@ namespace GpLib.Persistence.EventStore
     {
         DateTime Timestamp { get; }
 
-        public object Payload { get; set; }
+        object Payload { get; set; }
 
     }
 }
